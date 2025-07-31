@@ -1,0 +1,67 @@
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px; 
+  margin: 20px auto;
+  position: relative;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+
+
+.carousel-slide:nth-child(1) { background-color: #9c27b0; } /* Клон последнего */
+.carousel-slide:nth-child(2) { background-color: #2196f3; } /* Слайд 1 */
+.carousel-slide:nth-child(3) { background-color: #4caf50; } /* Слайд 2 */
+.carousel-slide:nth-child(4) { background-color: #ffc107; } /* Слайд 3 */
+.carousel-slide:nth-child(5) { background-color: #9c27b0; } /* Слайд 4 */
+.carousel-slide:nth-child(6) { background-color: #2196f3; } /* Клон первого */
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.8em;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.prev {
+  left: 15px;
+}
+
+.carousel-button.next {
+  right: 15px;
+}
